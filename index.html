@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HVTDEVIL — Minecraft Cape Codes</title>
+  <meta name="description" content="Buy Minecraft cape codes with PayPal or cryptocurrency. Browse official capes and purchase through Discord.">
+  <meta name="keywords" content="minecraft cape codes, cape marketplace, HVTDEVIL, buy cape codes, minecraft capes">
+  <meta name="author" content="HVTDEVIL">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="HVTDEVIL — Minecraft Cape Codes">
+  <meta property="og:description" content="Buy Minecraft cape codes with PayPal or cryptocurrency. Browse official capes and purchase through Discord.">
+  <meta property="og:site_name" content="HVTDEVIL">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HVTDEVIL — Minecraft Cape Codes">
+  <meta name="twitter:description" content="Buy Minecraft cape codes with PayPal or cryptocurrency. Browse official capes and purchase through Discord.">
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/home.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#030014',
+            muted: '#94a3b8',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "HVTDEVIL",
+    "description": "Minecraft Cape Code Marketplace",
+    "sameAs": [
+      "https://discord.gg/vTCPxq9zAT"
+    ],
+    "paymentAccepted": ["PayPal", "Cryptocurrency"]
+  }
+  </script>
+</head>
+<body class="bg-[#030014] text-white antialiased page-home">
+
+  <!-- ========================= -->
+  <!-- CAPE PRICE CONFIGURATION -->
+  <!-- Edit prices here only     -->
+  <!-- ========================= -->
+  <script src="js/prices-config.js"></script>
+  <script src="js/cape-assets-manifest.js"></script>
+
+  <!-- Page Loader -->
+  <div id="page-loader" class="page-loader page-loader--elite" aria-hidden="true">
+    <div class="page-loader__inner">
+      <div class="page-loader__ring" aria-hidden="true"></div>
+      <div class="page-loader__logo font-display">HVT<span class="text-purple-400">DEVIL</span></div>
+      <p class="page-loader__tagline">Premium Cape Marketplace</p>
+    </div>
+  </div>
+
+  <!-- Mouse Glow -->
+  <div id="mouse-glow" class="mouse-glow" style="opacity:0" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header id="navbar" class="navbar">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20" aria-label="Main navigation">
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center font-bold text-sm group-hover:scale-110 transition-transform">H</div>
+        <span class="font-display font-bold text-lg tracking-tight">HVT<span class="text-purple-400">DEVIL</span></span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#minecraft-capes" class="text-sm text-slate-400 hover:text-white transition-colors">Capes</a>
+        <a href="capes.html" class="text-sm text-slate-400 hover:text-white transition-colors">Marketplace</a>
+        <a href="#how-it-works" class="text-sm text-slate-400 hover:text-white transition-colors">How It Works</a>
+        <a href="#discord" class="text-sm text-slate-400 hover:text-white transition-colors">Discord</a>
+        <a href="faq.html" class="text-sm text-slate-400 hover:text-white transition-colors">FAQ</a>
+      </div>
+
+      <div class="hidden md:flex items-center gap-3">
+        <a href="https://discord.gg/vTCPxq9zAT" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Discord</a>
+        <a href="capes.html" class="btn btn-primary btn-sm">Browse Capes</a>
+      </div>
+
+      <button id="mobile-menu-toggle" class="md:hidden p-2 text-slate-400 hover:text-white" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu md:hidden glass-strong border-t border-white/5">
+      <div class="px-4 py-6 flex flex-col gap-4">
+        <a href="capes.html" class="text-slate-400 hover:text-white py-2">Marketplace</a>
+        <a href="#how-it-works" class="text-slate-400 hover:text-white py-2">How It Works</a>
+        <a href="#discord" class="text-slate-400 hover:text-white py-2">Discord</a>
+        <a href="faq.html" class="text-slate-400 hover:text-white py-2">FAQ</a>
+        <div class="flex flex-col gap-3 pt-4 border-t border-white/5">
+          <a href="https://discord.gg/vTCPxq9zAT" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Join Discord</a>
+          <a href="capes.html" class="btn btn-primary">Browse Capes</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══ HERO — Cinematic ═══ -->
+    <section class="hero-cinematic" aria-label="Hero">
+      <div class="hero-cinematic__atmosphere" aria-hidden="true">
+        <div class="hero-cinematic__mesh"></div>
+        <div class="hero-cinematic__aurora"></div>
+        <canvas id="particles-canvas" class="hero-cinematic__particles"></canvas>
+        <div class="hero-cinematic__noise"></div>
+        <div class="hero-cinematic__horizon"></div>
+        <div class="hero-cinematic__vignette"></div>
+      </div>
+
+      <div class="hero-cinematic__container">
+        <div class="hero-cinematic__theater-wrap hero-enter hero-enter--1">
+          <div class="hero-cinematic__theater" id="hero-theater">
+            <div class="hero-cinematic__stage">
+              <div class="hero-cinematic__stage-ambient" aria-hidden="true"></div>
+              <div class="hero-cinematic__stage-ring" aria-hidden="true"></div>
+              <div class="hero-cinematic__stage-floor" aria-hidden="true"></div>
+
+              <div class="hero-cinematic__cape hero-cinematic__cape--left">
+                <div class="hero-cinematic__cape-aura hero-cinematic__cape-aura--amber" aria-hidden="true"></div>
+                <img src="assets/images/capes/display/crafterfront.webp" alt="" class="hero-cape-img" width="115" height="180" decoding="async">
+                <span class="hero-cinematic__cape-name">Crafter</span>
+              </div>
+
+              <div class="hero-cinematic__cape hero-cinematic__cape--featured">
+                <div class="hero-cinematic__cape-aura hero-cinematic__cape-aura--moon" aria-hidden="true"></div>
+                <img src="assets/images/capes/display/moonlightfront.webp" alt="Moonlight Cape" class="hero-cape-img" width="115" height="180" decoding="async">
+                <span class="hero-cinematic__cape-tag">Moonlight Cape</span>
+              </div>
+
+              <div class="hero-cinematic__cape hero-cinematic__cape--right">
+                <div class="hero-cinematic__cape-aura hero-cinematic__cape-aura--emerald" aria-hidden="true"></div>
+                <img src="assets/images/capes/display/experiencefront.webp" alt="" class="hero-cape-img" width="115" height="180" decoding="async">
+                <span class="hero-cinematic__cape-name">Experience</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-cinematic__content">
+          <span class="hero-cinematic__eyebrow hero-enter hero-enter--2">
+            <span class="hero-cinematic__eyebrow-pulse" aria-hidden="true"></span>
+            Premium Cape Marketplace
+          </span>
+
+          <h1 class="hero-cinematic__title hero-enter hero-enter--3">
+            <span class="hero-cinematic__title-line">Official Minecraft</span>
+            <span class="hero-cinematic__title-gradient">Cape Codes</span>
+            <span class="hero-cinematic__title-sub">PayPal &amp; Crypto · Discord Delivery</span>
+          </h1>
+
+          <p class="hero-cinematic__desc hero-enter hero-enter--4">
+            Browse official Minecraft capes and purchase through Discord with PayPal or cryptocurrency. Fast delivery. Verified seller.
+          </p>
+
+          <div class="hero-cinematic__actions hero-enter hero-enter--5">
+            <a href="capes.html" class="btn btn-primary btn-lg btn-elite btn-magnetic">
+              <span class="btn-elite__glow" aria-hidden="true"></span>
+              Browse Capes
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://discord.gg/vTCPxq9zAT" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-secondary btn-lg btn-glass btn-magnetic">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+              Join Discord
+            </a>
+          </div>
+
+          <div class="hero-cinematic__metrics hero-enter hero-enter--6" data-reveal-stagger>
+            <div class="hero-cinematic__metric">
+              <span class="hero-cinematic__metric-value" data-seller-stat="dealt-value">$40K+</span>
+              <span class="hero-cinematic__metric-label" data-seller-stat="dealt-label">Dealt over</span>
+            </div>
+            <div class="hero-cinematic__metric">
+              <span class="hero-cinematic__metric-value" data-seller-stat="vouches-value">300+</span>
+              <span class="hero-cinematic__metric-label" data-seller-stat="vouches-label">Vouches</span>
+            </div>
+            <div class="hero-cinematic__metric">
+              <span class="hero-cinematic__metric-value">Discord</span>
+              <span class="hero-cinematic__metric-label">Delivery</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-cinematic__scroll scroll-indicator" aria-hidden="true">
+        <span class="hero-cinematic__scroll-text">Scroll</span>
+        <div class="hero-cinematic__scroll-track">
+          <div class="hero-cinematic__scroll-dot"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Payment methods & track record -->
+    <div class="trust-strip trust-strip--premium" aria-label="Payment methods and seller track record">
+      <div class="trust-badge trust-badge--stat">
+        <span class="trust-badge__value" data-seller-stat="dealt-value">$40K+</span>
+        <span class="trust-badge__label" data-seller-stat="dealt-label">Dealt over</span>
+      </div>
+      <div class="trust-badge trust-badge--stat">
+        <span class="trust-badge__value" data-seller-stat="vouches-value">300+</span>
+        <span class="trust-badge__label" data-seller-stat="vouches-label">Vouches</span>
+      </div>
+      <div class="trust-badge"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg> PayPal</div>
+      <div class="trust-badge"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Cryptocurrency</div>
+    </div>
+
+    <!-- ═══ CONNECT ═══ -->
+    <div class="section-divider" aria-hidden="true"></div>
+    <section id="trust" class="relative py-24 md:py-32 bg-aurora overflow-hidden">
+      <div class="section-glow section-glow--purple absolute -top-32 left-1/4" aria-hidden="true"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="reveal section-header">
+          <span class="section-label">HVTDEVIL</span>
+          <h2 class="section-header__title">Purchase &amp; Support</h2>
+          <p class="section-header__desc">Buy through Discord. Verify you are speaking with the real seller before purchasing.</p>
+        </div>
+
+        <div class="reveal max-w-3xl mx-auto mb-8">
+          <div class="seller-stats" data-seller-stats></div>
+        </div>
+
+        <div class="reveal max-w-3xl mx-auto mb-12">
+          <aside class="authenticity-notice authenticity-notice--prominent" role="note" aria-label="Identity verification">
+            <div class="authenticity-notice__icon" aria-hidden="true">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <p class="authenticity-notice__text">Always verify that you are speaking with the real me by checking my Discord account: <span class="authenticity-notice__username" data-discord-username>getmeintogaming</span></p>
+          </aside>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 max-w-4xl mx-auto">
+          <div class="reveal premium-card p-6 group">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="font-semibold mb-2">PayPal</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">PayPal is accepted for purchases initiated through Discord.</p>
+          </div>
+
+          <div class="reveal reveal-delay-1 premium-card p-6 group">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3 class="font-semibold mb-2">Cryptocurrency</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">Cryptocurrency is accepted for purchases initiated through Discord.</p>
+          </div>
+
+          <div class="reveal reveal-delay-2 premium-card p-6 group sm:col-span-2 lg:col-span-1">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            </div>
+            <h3 class="font-semibold mb-2">Discord Support</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">Join our Discord server to purchase capes and get support.</p>
+            <a href="https://discord.gg/vTCPxq9zAT" target="_blank" rel="noopener noreferrer" data-link="discord" class="text-sm text-purple-400 hover:text-purple-300">Join Discord →</a>
+          </div>
+        </div>
+
+        <div class="reveal glass-strong rounded-3xl p-8 md:p-10 gradient-border max-w-2xl mx-auto text-center premium-card">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center text-xl font-bold mx-auto mb-4">H</div>
+          <h3 class="text-xl font-display font-bold mb-2">HVTDEVIL</h3>
+          <p class="text-slate-400 leading-relaxed mb-4">Minecraft cape code seller. Connect via Discord to purchase or ask questions.</p>
+          <p class="text-sm text-slate-500 mb-6" data-seller-stat="summary">Dealt over $40K+ · 300+ vouches</p>
+          <div class="flex flex-wrap gap-3 justify-center">
+            <a href="https://discord.gg/vTCPxq9zAT" target="_blank" rel="noopener noreferrer" data-link="discord" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl glass text-sm hover:bg-white/10 transition-colors">Join Discord <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+          </div>
+          <div class="mt-6 text-left">
+            <aside class="authenticity-notice authenticity-notice--compact" role="note" aria-label="Identity verification">
+              <div class="authenticity-notice__icon" aria-hidden="true">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+              </div>
+              <p class="authenticity-notice__text">Always verify that you are speaking with the real me by checking my Discord account: <span class="authenticity-notice__username" data-discord-username>getmeintogaming</span></p>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ MINECRAFT CAPES SHOWCASE ═══ -->
+    <div class="section-divider" aria-hidden="true"></div>
+    <section id="minecraft-capes" class="relative section-pad section-showcase collectible-showcase home-section overflow-hidden">
+      <div class="home-section__fade-top" aria-hidden="true"></div>
+      <div class="absolute inset-0 bg-grid opacity-20 pointer-events-none"></div>
+      <div class="section-glow section-glow--blue absolute top-1/3 right-0 translate-x-1/3" data-section-parallax="0.12" aria-hidden="true"></div>
+      <div class="section-glow section-glow--purple absolute bottom-0 left-1/4" data-section-parallax="0.08" aria-hidden="true"></div>
+      <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="reveal section-header">
+          <span class="section-label">Minecraft Capes</span>
+          <h2 class="section-header__title">Premium Minecraft Capes</h2>
+          <p class="section-header__desc">Official Minecraft capes available for purchase through Discord.</p>
+        </div>
+
+        <!-- Capes loaded from CAPES in js/prices-config.js -->
+        <div id="minecraft-capes-showcase" class="gallery-grid gallery-grid-premium gallery-grid-home"></div>
+
+        <div class="text-center mt-12 reveal">
+          <a href="capes.html" class="btn btn-secondary btn-lg">View Full Marketplace <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PAYMENT ═══ -->
+    <div class="section-divider" aria-hidden="true"></div>
+    <section id="payment" class="relative py-24 md:py-32 bg-aurora overflow-hidden">
+      <div class="section-glow section-glow--purple absolute bottom-0 left-1/2 -translate-x-1/2" aria-hidden="true"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="reveal section-header">
+          <span class="section-label">Secure Checkout</span>
+          <h2 class="section-header__title">Payment Methods</h2>
+          <p class="section-header__desc">PayPal and cryptocurrency accepted. Purchases are made through Discord.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+          <div class="reveal payment-card">
+            <div class="relative z-10">
+              <div class="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-blue-400" viewBox="0 0 24 24" fill="currentColor"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944 2.901a.77.77 0 0 1 .762-.659h6.988c2.613 0 4.626.634 5.984 1.884 1.087 1.002 1.624 2.383 1.624 4.127 0 .943-.173 1.898-.515 2.838a8.62 8.62 0 0 1-1.443 2.361c-1.228 1.396-2.925 2.104-5.043 2.104H9.676l-1.02 5.38a.641.641 0 0 1-.633.541h-.947z"/></svg>
+              </div>
+              <h3 class="text-2xl font-display font-bold mb-3">PayPal</h3>
+              <p class="text-slate-400 mb-6 leading-relaxed">Pay with PayPal. Purchases are initiated through Discord.</p>
+              <ul class="text-sm text-slate-400 space-y-2 text-left max-w-xs mx-auto">
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> PayPal accepted</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-1 payment-card">
+            <div class="relative z-10">
+              <div class="w-16 h-16 rounded-2xl bg-amber-500/10 flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <h3 class="text-2xl font-display font-bold mb-3">Cryptocurrency</h3>
+              <p class="text-slate-400 mb-6 leading-relaxed">Pay with cryptocurrency. Purchases are initiated through Discord.</p>
+              <ul class="text-sm text-slate-400 space-y-2 text-left max-w-xs mx-auto">
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Cryptocurrency accepted</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment Flow Animation -->
+        <div class="reveal glass-strong rounded-3xl p-8 md:p-12 gradient-border">
+          <h3 class="text-center text-xl font-display font-semibold mb-10">Secure Transaction Flow</h3>
+          <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0">
+            <div class="payment-flow-step active flex flex-col items-center text-center px-6">
+              <div class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center mb-3 shadow-lg shadow-purple-500/30">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
+              </div>
+              <span class="text-sm font-medium">Select Cape</span>
+            </div>
+            <div class="hidden md:block w-16 h-px bg-gradient-to-r from-purple-500 to-blue-500"></div>
+            <div class="payment-flow-step flex flex-col items-center text-center px-6 opacity-50">
+              <div class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center mb-3">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              </div>
+              <span class="text-sm font-medium">Pay Securely</span>
+            </div>
+            <div class="hidden md:block w-16 h-px bg-gradient-to-r from-purple-500 to-blue-500"></div>
+            <div class="payment-flow-step flex flex-col items-center text-center px-6 opacity-50">
+              <div class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center mb-3">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="text-sm font-medium">Code Delivered</span>
+            </div>
+            <div class="hidden md:block w-16 h-px bg-gradient-to-r from-purple-500 to-blue-500"></div>
+            <div class="payment-flow-step flex flex-col items-center text-center px-6 opacity-50">
+              <div class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center mb-3">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <span class="text-sm font-medium">Redeem &amp; Enjoy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ HOW IT WORKS ═══ -->
+    <div class="section-divider" aria-hidden="true"></div>
+    <section id="how-it-works" class="relative py-24 md:py-32 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal section-header">
+          <span class="section-label">Simple Process</span>
+          <h2 class="section-header__title">How It Works</h2>
+          <p class="section-header__desc">Three steps from browsing to wearing your new cape.</p>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto">
+          <div class="hidden md:block timeline-line"></div>
+          <div class="space-y-12 md:space-y-0">
+            <div class="reveal md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8 items-center">
+              <div class="md:text-right hidden md:block"></div>
+              <div class="timeline-dot mx-auto">1</div>
+              <div class="premium-card p-6 md:ml-0 mt-4 md:mt-0">
+                <h3 class="font-display font-semibold text-xl mb-2">Choose Your Cape</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Browse available Minecraft capes and select the one you want to purchase.</p>
+              </div>
+            </div>
+            <div class="reveal reveal-delay-1 md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8 items-center md:pt-12">
+              <div class="premium-card p-6 md:mr-0 order-2 md:order-1">
+                <h3 class="font-display font-semibold text-xl mb-2">Pay Securely</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Join Discord and complete your purchase via PayPal or cryptocurrency.</p>
+              </div>
+              <div class="timeline-dot mx-auto order-1 md:order-2">2</div>
+              <div class="hidden md:block order-3"></div>
+            </div>
+            <div class="reveal reveal-delay-2 md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8 items-center md:pt-12">
+              <div class="md:text-right hidden md:block"></div>
+              <div class="timeline-dot mx-auto">3</div>
+              <div class="premium-card p-6 mt-4 md:mt-0">
+                <h3 class="font-display font-semibold text-xl mb-2">Receive Your Code</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Your cape redemption code is delivered after payment is confirmed. Redeem it on your Minecraft account.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ DISCORD ═══ -->
+    <section id="discord" class="relative py-24 md:py-32 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-950/50 via-[#030014] to-purple-950/30"></div>
+      <div class="absolute top-0 right-0 w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px]"></div>
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="reveal">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium tracking-wider uppercase glass text-indigo-300 border border-indigo-500/20 mb-6">Discord</span>
+          <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">Join the HVTDEVIL Discord</h2>
+          <p class="text-lg text-slate-400 mb-8 leading-relaxed">Purchase capes and get support through our Discord server.</p>
+          <a href="https://discord.gg/vTCPxq9zAT" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary btn-lg" style="background:linear-gradient(135deg,#5865F2,#4752C4)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+            Join Discord Server
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- USER INPUT REQUIRED: Add FAQ items with verified answers in faq.html -->
+    <section id="faq-preview" class="relative py-24 md:py-32 bg-aurora">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+        <span class="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-medium tracking-wider uppercase glass text-purple-300 border border-purple-500/20">FAQ</span>
+        <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">Questions?</h2>
+        <p class="text-lg text-slate-400 mb-8">FAQ content is pending. Contact us on Discord for answers, or provide FAQ content to populate the FAQ page.</p>
+        <a href="faq.html" class="btn btn-secondary">FAQ Page</a>
+      </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section id="contact" class="relative section-pad border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-2xl mx-auto mb-12">
+          <span class="section-label">Contact</span>
+          <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-3">Get In Touch</h2>
+          <p class="text-slate-400">Questions about a cape or need help with an order? Reach us through any channel below.</p>
+        </div>
+        <div class="contact-grid reveal max-w-2xl mx-auto">
+          <div class="contact-card">
+            <div class="contact-icon"><svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg></div>
+            <h3>Discord</h3>
+            <p>Purchase capes and get support.</p>
+            <a href="https://discord.gg/vTCPxq9zAT" target="_blank" rel="noopener noreferrer" data-link="discord">Join Server →</a>
+          </div>
+          <div class="contact-card contact-card--verify">
+            <div class="contact-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <h3>Verify Identity</h3>
+            <p>Always verify that you are speaking with the real me by checking my Discord account: <span class="authenticity-notice__username" data-discord-username>getmeintogaming</span></p>
+          </div>
+        </div>
+        <div class="reveal max-w-2xl mx-auto mt-8">
+          <aside class="authenticity-notice" role="note" aria-label="Identity verification">
+            <div class="authenticity-notice__icon" aria-hidden="true">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <p class="authenticity-notice__text">Always verify that you are speaking with the real me by checking my Discord account: <span class="authenticity-notice__username" data-discord-username>getmeintogaming</span></p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FINAL CTA ═══ -->
+    <section class="relative py-24 md:py-32 overflow-hidden cta-premium">
+      <div class="cta-premium__glow" aria-hidden="true"></div>
+      <div class="absolute inset-0 bg-grid opacity-40"></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <div class="reveal">
+          <h2 class="text-4xl md:text-6xl font-display font-bold tracking-tight mb-6 leading-tight">
+            Ready To Unlock<br><span class="gradient-text">Your Next Cape?</span>
+          </h2>
+          <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">Browse available capes or join Discord to purchase with PayPal or cryptocurrency.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="capes.html" class="btn btn-primary btn-lg btn-elite btn-magnetic">Browse Inventory <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="https://discord.gg/vTCPxq9zAT" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg btn-glass btn-magnetic">Join Discord</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="border-t border-white/5 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <a href="index.html" class="flex items-center gap-2.5 mb-4">
+            <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center font-bold text-sm">H</div>
+            <span class="font-display font-bold text-lg">HVT<span class="text-purple-400">DEVIL</span></span>
+          </a>
+          <p class="text-sm text-slate-400 leading-relaxed">Minecraft cape code marketplace. PayPal and cryptocurrency accepted.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-slate-300">Navigation</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="capes.html" class="hover:text-white transition-colors">Marketplace</a></li>
+            <li><a href="faq.html" class="hover:text-white transition-colors">FAQ</a></li>
+            <li><a href="#how-it-works" class="hover:text-white transition-colors">How It Works</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-slate-300">Community</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="https://discord.gg/vTCPxq9zAT" target="_blank" rel="noopener noreferrer" data-link="discord" class="hover:text-white transition-colors">Discord Server</a></li>
+            <li><a href="trust.html" class="hover:text-white transition-colors">Trust &amp; Safety</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-slate-300">Legal</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="authenticity-footer-bar max-w-3xl mx-auto px-4 sm:px-0">
+        <aside class="authenticity-notice authenticity-notice--compact" role="note" aria-label="Identity verification">
+          <div class="authenticity-notice__icon" aria-hidden="true">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <p class="authenticity-notice__text">Always verify that you are speaking with the real me by checking my Discord account: <span class="authenticity-notice__username" data-discord-username>getmeintogaming</span></p>
+        </aside>
+      </div>
+      <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+        <p>&copy; <span id="current-year">2026</span> HVTDEVIL. All rights reserved.</p>
+        <p>Not affiliated with Mojang Studios or Microsoft.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/animations.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/inventory.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

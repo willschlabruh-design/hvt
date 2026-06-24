@@ -1,0 +1,214 @@
+{
+  "processedAt": "2026-06-24T08:37:39.477Z",
+  "displayPath": "assets/images/capes/display",
+  "files": [
+    {
+      "filename": "builderback.png",
+      "bounds": {
+        "left": 1139,
+        "top": 822,
+        "width": 282,
+        "height": 451
+      },
+      "width": 113,
+      "height": 180,
+      "webp": "assets/images/capes/display/builderback.webp",
+      "png": "assets/images/capes/display/builderback.png"
+    },
+    {
+      "filename": "builderfront.png",
+      "bounds": {
+        "left": 1135,
+        "top": 789,
+        "width": 290,
+        "height": 452
+      },
+      "width": 115,
+      "height": 180,
+      "webp": "assets/images/capes/display/builderfront.webp",
+      "png": "assets/images/capes/display/builderfront.png"
+    },
+    {
+      "filename": "copperback.png",
+      "bounds": {
+        "left": 1142,
+        "top": 802,
+        "width": 272,
+        "height": 392
+      },
+      "width": 125,
+      "height": 180,
+      "webp": "assets/images/capes/display/copperback.webp",
+      "png": "assets/images/capes/display/copperback.png"
+    },
+    {
+      "filename": "copperfront.png",
+      "bounds": {
+        "left": 1144,
+        "top": 794,
+        "width": 272,
+        "height": 432
+      },
+      "width": 113,
+      "height": 180,
+      "webp": "assets/images/capes/display/copperfront.webp",
+      "png": "assets/images/capes/display/copperfront.png"
+    },
+    {
+      "filename": "crafterback.png",
+      "bounds": {
+        "left": 1163,
+        "top": 802,
+        "width": 238,
+        "height": 378
+      },
+      "width": 113,
+      "height": 180,
+      "webp": "assets/images/capes/display/crafterback.webp",
+      "png": "assets/images/capes/display/crafterback.png"
+    },
+    {
+      "filename": "crafterfront.png",
+      "bounds": {
+        "left": 290,
+        "top": 206,
+        "width": 85,
+        "height": 133
+      },
+      "width": 115,
+      "height": 180,
+      "webp": "assets/images/capes/display/crafterfront.webp",
+      "png": "assets/images/capes/display/crafterfront.png"
+    },
+    {
+      "filename": "expereinceback.png",
+      "bounds": {
+        "left": 295,
+        "top": 212,
+        "width": 77,
+        "height": 120
+      },
+      "width": 116,
+      "height": 180,
+      "webp": "assets/images/capes/display/expereinceback.webp",
+      "png": "assets/images/capes/display/expereinceback.png"
+    },
+    {
+      "filename": "experiencefront.png",
+      "bounds": {
+        "left": 295,
+        "top": 203,
+        "width": 77,
+        "height": 119
+      },
+      "width": 116,
+      "height": 180,
+      "webp": "assets/images/capes/display/experiencefront.webp",
+      "png": "assets/images/capes/display/experiencefront.png"
+    },
+    {
+      "filename": "homeback.png",
+      "bounds": {
+        "left": 301,
+        "top": 207,
+        "width": 65,
+        "height": 100
+      },
+      "width": 117,
+      "height": 180,
+      "webp": "assets/images/capes/display/homeback.webp",
+      "png": "assets/images/capes/display/homeback.png"
+    },
+    {
+      "filename": "homefront.png",
+      "bounds": {
+        "left": 294,
+        "top": 202,
+        "width": 79,
+        "height": 119
+      },
+      "width": 119,
+      "height": 180,
+      "webp": "assets/images/capes/display/homefront.webp",
+      "png": "assets/images/capes/display/homefront.png"
+    },
+    {
+      "filename": "menacefront.png",
+      "bounds": {
+        "left": 294,
+        "top": 203,
+        "width": 78,
+        "height": 118
+      },
+      "width": 119,
+      "height": 180,
+      "webp": "assets/images/capes/display/menacefront.webp",
+      "png": "assets/images/capes/display/menacefront.png"
+    },
+    {
+      "filename": "mencaeback.png",
+      "bounds": {
+        "left": 305,
+        "top": 204,
+        "width": 56,
+        "height": 87
+      },
+      "width": 116,
+      "height": 180,
+      "webp": "assets/images/capes/display/mencaeback.webp",
+      "png": "assets/images/capes/display/mencaeback.png"
+    },
+    {
+      "filename": "moonlightback.png",
+      "bounds": {
+        "left": 299,
+        "top": 207,
+        "width": 67,
+        "height": 104
+      },
+      "width": 116,
+      "height": 180,
+      "webp": "assets/images/capes/display/moonlightback.webp",
+      "png": "assets/images/capes/display/moonlightback.png"
+    },
+    {
+      "filename": "moonlightfront.png",
+      "bounds": {
+        "left": 303,
+        "top": 202,
+        "width": 60,
+        "height": 94
+      },
+      "width": 115,
+      "height": 180,
+      "webp": "assets/images/capes/display/moonlightfront.webp",
+      "png": "assets/images/capes/display/moonlightfront.png"
+    },
+    {
+      "filename": "purpleheartback.png",
+      "bounds": {
+        "left": 292,
+        "top": 212,
+        "width": 82,
+        "height": 130
+      },
+      "width": 114,
+      "height": 180,
+      "webp": "assets/images/capes/display/purpleheartback.webp",
+      "png": "assets/images/capes/display/purpleheartback.png"
+    },
+    {
+      "filename": "purpltheartfront.png",
+      "bounds": {
+        "left": 295,
+        "top": 204,
+        "width": 76,
+        "height": 117
+      },
+      "width": 117,
+      "height": 180,
+      "webp": "assets/images/capes/display/purpltheartfront.webp",
+      "png": "assets/images/capes/display/purpltheartfront.png"
+    }
+  ]
+}
