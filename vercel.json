@@ -1,4 +1,3 @@
 {
-  "version": 2,
-  "comment": "Static site + /api/contact serverless function. Do not rewrite /api/contact — Vercel maps api/contact.js automatically."
+  "version": 2
 }
