@@ -57,7 +57,7 @@ const CAPES = [
   {
     id: 'moonlight',
     name: 'Moonlight Cape',
-    price: '$200',
+    price: '$150',
     description:
       'Exclusive to Minecraft Experience: Moonlight Trail in Buenos Aires—code emailed within 72 hours after completing the event. Requires in-person attendance; not available through in-game purchase.',
     glow: '#93c5fd',
