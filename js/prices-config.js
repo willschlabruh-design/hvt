@@ -94,16 +94,12 @@ const SELLER_STATS = {
 };
 
 /**
- * Site & support configuration
- * ─────────────────────────────
- * supportEmail: displayed on support page (not exposed to client in form POST body from server)
- * contactFormEndpoint: URL the support form POSTs to (see api/contact.js or server/contact-server.js)
+ * Site configuration
+ * ──────────────────
+ * supportEmail: displayed on support page and used for mailto / copy actions
  */
 const SITE_CONFIG = {
-  supportEmail: 'william.schlanbusch@gmail.com',
-  contactFormEndpoint: '/api/contact',
-  /** Minimum ms between submissions from same browser (client-side throttle) */
-  contactFormCooldownMs: 60000,
+  supportEmail: 'Hvtdevil@gmail.com',
 };
 
 /** Payment methods — PayPal is Friends & Family only */

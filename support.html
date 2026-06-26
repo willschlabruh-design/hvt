@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support — HVTDEVIL</title>
-  <meta name="description" content="Contact HVTDEVIL support for help with Minecraft cape code orders, payments, and redemption.">
+  <title>Contact — HVTDEVIL</title>
+  <meta name="description" content="Contact HVTDEVIL for help with Minecraft cape code orders, payments, and redemption.">
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -34,13 +34,13 @@
       <div class="absolute inset-0 bg-aurora"></div>
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <span class="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-medium tracking-wider uppercase glass text-purple-300 border border-purple-500/20">Support</span>
-        <h1 class="text-4xl md:text-5xl font-display font-bold tracking-tight mb-4">Contact <span class="gradient-text">Support</span></h1>
-        <p class="text-lg text-slate-400 leading-relaxed">Questions about an order, payment, or redemption? Send us a message — or reach us faster on Discord for purchases.</p>
+        <h1 class="text-4xl md:text-5xl font-display font-bold tracking-tight mb-4">Contact <span class="gradient-text">Me</span></h1>
+        <p class="text-lg text-slate-400 leading-relaxed max-w-xl mx-auto">Have a question about a cape, your order, or anything else? Feel free to contact me directly.</p>
       </div>
     </section>
 
     <section class="py-8">
-      <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
         <aside class="authenticity-notice authenticity-notice--prominent reveal mb-8" role="note" aria-label="Identity verification">
           <div class="authenticity-notice__icon" aria-hidden="true">
             <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
@@ -48,69 +48,37 @@
           <p class="authenticity-notice__text">For purchases, always use our official Discord and verify the username: <span class="authenticity-notice__username" data-discord-username>getmeintogaming</span></p>
         </aside>
 
-        <div class="grid sm:grid-cols-2 gap-4 mb-10 reveal">
-          <div class="premium-card p-5">
-            <h2 class="font-semibold mb-2">Discord (fastest)</h2>
-            <p class="text-sm text-slate-400 mb-3">Best for new orders and live support.</p>
-            <a href="https://discord.gg/vTCPxq9zAT" target="_blank" rel="noopener noreferrer" data-link="discord" class="text-sm text-purple-400 hover:text-purple-300">Join Discord →</a>
+        <article class="support-contact-card glass-strong reveal" aria-labelledby="support-contact-heading">
+          <div class="support-contact-card__icon" aria-hidden="true">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
           </div>
-          <div class="premium-card p-5">
-            <h2 class="font-semibold mb-2">Email</h2>
-            <p class="text-sm text-slate-400 mb-3">Use the form below — replies go to <span data-support-email class="text-slate-300">william.schlanbusch@gmail.com</span>.</p>
+
+          <h2 id="support-contact-heading" class="support-contact-card__title">Email</h2>
+
+          <div class="support-contact-card__email-row">
+            <span class="support-contact-card__mail-icon" aria-hidden="true">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            </span>
+            <a href="mailto:Hvtdevil@gmail.com" class="support-contact-card__email" data-support-email data-support-mailto>Hvtdevil@gmail.com</a>
           </div>
-        </div>
 
-        <div class="glass-strong rounded-2xl p-8 md:p-10 reveal">
-          <h2 class="text-xl font-display font-semibold mb-6">Send a message</h2>
+          <div class="support-contact-card__actions">
+            <button type="button" id="copy-support-email" class="btn btn-primary btn-lg support-contact-card__btn" data-copy-email>
+              Copy Email
+            </button>
+            <a href="mailto:Hvtdevil@gmail.com" class="btn btn-secondary btn-lg support-contact-card__btn" data-support-mailto>
+              Open in Email App
+            </a>
+          </div>
 
-          <div id="support-form-status" class="support-form__status support-form__status--success mb-6" hidden role="status" aria-live="polite"></div>
+          <p class="support-contact-card__note">I usually respond within 24 hours.</p>
+          <p id="copy-email-feedback" class="support-contact-card__feedback" role="status" aria-live="polite" hidden></p>
+        </article>
 
-          <form id="support-form" class="support-form" novalidate>
-            <div class="support-form__hp" aria-hidden="true">
-              <label for="support-website">Website</label>
-              <input type="text" id="support-website" name="website" class="support-form__input" tabindex="-1" autocomplete="off">
-            </div>
-
-            <div class="support-form__row support-form__row--2">
-              <div class="support-form__field">
-                <label for="support-name">Name <span aria-hidden="true">*</span></label>
-                <input type="text" id="support-name" name="name" class="support-form__input" required autocomplete="name" maxlength="120">
-                <span class="support-form__error" data-error-for="support-name" hidden></span>
-              </div>
-              <div class="support-form__field">
-                <label for="support-email">Email <span aria-hidden="true">*</span></label>
-                <input type="email" id="support-email" name="email" class="support-form__input" required autocomplete="email" maxlength="254">
-                <span class="support-form__error" data-error-for="support-email" hidden></span>
-              </div>
-            </div>
-
-            <div class="support-form__row support-form__row--2">
-              <div class="support-form__field">
-                <label for="support-discord">Discord username <span class="optional">(optional)</span></label>
-                <input type="text" id="support-discord" name="discord" class="support-form__input" autocomplete="off" maxlength="64" placeholder="e.g. username">
-                <span class="support-form__error" data-error-for="support-discord" hidden></span>
-              </div>
-              <div class="support-form__field">
-                <label for="support-order-id">Order ID <span class="optional">(optional)</span></label>
-                <input type="text" id="support-order-id" name="orderId" class="support-form__input" autocomplete="off" maxlength="64" placeholder="If provided in Discord">
-                <span class="support-form__error" data-error-for="support-order-id" hidden></span>
-              </div>
-            </div>
-
-            <div class="support-form__field">
-              <label for="support-subject">Subject <span aria-hidden="true">*</span></label>
-              <input type="text" id="support-subject" name="subject" class="support-form__input" required maxlength="200" placeholder="Brief summary of your request">
-              <span class="support-form__error" data-error-for="support-subject" hidden></span>
-            </div>
-
-            <div class="support-form__field">
-              <label for="support-message">Message <span aria-hidden="true">*</span></label>
-              <textarea id="support-message" name="message" class="support-form__textarea" required maxlength="5000" placeholder="Describe your question or issue in detail…"></textarea>
-              <span class="support-form__error" data-error-for="support-message" hidden></span>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-lg support-form__submit w-full sm:w-auto">Send Message</button>
-          </form>
+        <div class="premium-card p-5 mt-6 reveal reveal-delay-1 text-center sm:text-left">
+          <h2 class="font-semibold mb-2">Discord (fastest for orders)</h2>
+          <p class="text-sm text-slate-400 mb-3">Best for new purchases and live support.</p>
+          <a href="https://discord.gg/vTCPxq9zAT" target="_blank" rel="noopener noreferrer" data-link="discord" class="text-sm text-purple-400 hover:text-purple-300">Join Discord →</a>
         </div>
       </div>
     </section>
@@ -122,6 +90,6 @@
   <script src="js/animations.js"></script>
   <script src="js/footer.js"></script>
   <script src="js/app.js"></script>
-  <script src="js/support-form.js"></script>
+  <script src="js/support-contact.js"></script>
 </body>
 </html>
