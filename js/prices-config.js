@@ -49,7 +49,7 @@ const CAPES = [
   {
     id: 'builder',
     name: 'Builder Cape',
-    price: '$24.99',
+    price: '$2',
     description:
       'TwitchCon 2026 / Minecraft Live promotion—earned by watching Minecraft on Twitch (5 min) or TikTok (3 min) between May 30 and mid-June 2026. New codes can no longer be obtained from the drop.',
     glow: '#eab308',
