@@ -18,10 +18,10 @@ function logVercelEnvCheck() {
     envSource: 'process.env',
     vercelEnv: env.VERCEL_ENV || null,
     vercelUrl: env.VERCEL_URL || null,
-    SUPPORT_EMAIL: Boolean(env.SUPPORT_EMAIL && String(env.SUPPORT_EMAIL).trim()),
+    SUPPORT_EMAIL: env.SUPPORT_EMAIL ? String(env.SUPPORT_EMAIL).trim() : null,
+    FROM_EMAIL: env.FROM_EMAIL ? String(env.FROM_EMAIL).trim() : null,
+    EMAIL_PROVIDER: env.EMAIL_PROVIDER ? String(env.EMAIL_PROVIDER).trim() : null,
     RESEND_API_KEY: Boolean(env.RESEND_API_KEY && String(env.RESEND_API_KEY).trim()),
-    FROM_EMAIL: Boolean(env.FROM_EMAIL && String(env.FROM_EMAIL).trim()),
-    EMAIL_PROVIDER: Boolean(env.EMAIL_PROVIDER && String(env.EMAIL_PROVIDER).trim()),
   });
 }
 
