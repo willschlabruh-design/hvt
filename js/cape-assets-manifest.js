@@ -1,6 +1,6 @@
 /** Auto-generated — run: npm run capes */
 const CAPE_ASSETS_MANIFEST = {
-  "scannedAt": "2026-06-24T08:37:39.523Z",
+  "scannedAt": "2026-06-26T15:22:52.045Z",
   "assetsPath": "assets/images/capes",
   "displayPath": "assets/images/capes/display",
   "imageFiles": [
@@ -65,6 +65,10 @@ const CAPE_ASSETS_MANIFEST = {
       "backFilename": "builderback.webp",
       "frontSource": "assets/images/capes/builderfront.png",
       "backSource": "assets/images/capes/builderback.png",
+      "frontDisplayWidth": 120,
+      "frontDisplayHeight": 180,
+      "backDisplayWidth": 120,
+      "backDisplayHeight": 180,
       "hasDualView": true
     },
     {
@@ -75,6 +79,10 @@ const CAPE_ASSETS_MANIFEST = {
       "backFilename": "copperback.webp",
       "frontSource": "assets/images/capes/copperfront.png",
       "backSource": "assets/images/capes/copperback.png",
+      "frontDisplayWidth": 120,
+      "frontDisplayHeight": 180,
+      "backDisplayWidth": 120,
+      "backDisplayHeight": 180,
       "hasDualView": true
     },
     {
@@ -85,6 +93,10 @@ const CAPE_ASSETS_MANIFEST = {
       "backFilename": "crafterback.webp",
       "frontSource": "assets/images/capes/crafterfront.png",
       "backSource": "assets/images/capes/crafterback.png",
+      "frontDisplayWidth": 120,
+      "frontDisplayHeight": 180,
+      "backDisplayWidth": 120,
+      "backDisplayHeight": 180,
       "hasDualView": true
     },
     {
@@ -95,6 +107,10 @@ const CAPE_ASSETS_MANIFEST = {
       "backFilename": "expereinceback.webp",
       "frontSource": "assets/images/capes/experiencefront.png",
       "backSource": "assets/images/capes/expereinceback.png",
+      "frontDisplayWidth": 120,
+      "frontDisplayHeight": 180,
+      "backDisplayWidth": 120,
+      "backDisplayHeight": 180,
       "hasDualView": true
     },
     {
@@ -105,6 +121,10 @@ const CAPE_ASSETS_MANIFEST = {
       "backFilename": "homeback.webp",
       "frontSource": "assets/images/capes/homefront.png",
       "backSource": "assets/images/capes/homeback.png",
+      "frontDisplayWidth": 120,
+      "frontDisplayHeight": 180,
+      "backDisplayWidth": 120,
+      "backDisplayHeight": 180,
       "hasDualView": true
     },
     {
@@ -115,6 +135,10 @@ const CAPE_ASSETS_MANIFEST = {
       "backFilename": "mencaeback.webp",
       "frontSource": "assets/images/capes/menacefront.png",
       "backSource": "assets/images/capes/mencaeback.png",
+      "frontDisplayWidth": 120,
+      "frontDisplayHeight": 180,
+      "backDisplayWidth": 120,
+      "backDisplayHeight": 180,
       "hasDualView": true
     },
     {
@@ -125,6 +149,10 @@ const CAPE_ASSETS_MANIFEST = {
       "backFilename": "moonlightback.webp",
       "frontSource": "assets/images/capes/moonlightfront.png",
       "backSource": "assets/images/capes/moonlightback.png",
+      "frontDisplayWidth": 120,
+      "frontDisplayHeight": 180,
+      "backDisplayWidth": 120,
+      "backDisplayHeight": 180,
       "hasDualView": true
     },
     {
@@ -135,6 +163,10 @@ const CAPE_ASSETS_MANIFEST = {
       "backFilename": "purpleheartback.webp",
       "frontSource": "assets/images/capes/purpltheartfront.png",
       "backSource": "assets/images/capes/purpleheartback.png",
+      "frontDisplayWidth": 120,
+      "frontDisplayHeight": 180,
+      "backDisplayWidth": 120,
+      "backDisplayHeight": 180,
       "hasDualView": true
     }
   ]

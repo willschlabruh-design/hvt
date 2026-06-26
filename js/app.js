@@ -100,6 +100,12 @@
   }
   renderSellerStats();
 
+  if (typeof SITE_CONFIG !== 'undefined') {
+    document.querySelectorAll('[data-support-email]').forEach((el) => {
+      el.textContent = SITE_CONFIG.supportEmail || '';
+    });
+  }
+
   document.querySelectorAll('a[href="https://discord.gg/vTCPxq9zAT"]').forEach((el) => {
 
     if (!el.dataset.link) el.href = links.discord;
@@ -200,7 +206,13 @@
 
 
 
-  window.HVT_CONFIG = { ...links, discordVerifyUsername: verifyUsername, sellerStats: typeof SELLER_STATS !== 'undefined' ? SELLER_STATS : null };
+  window.HVT_CONFIG = {
+    ...links,
+    discordVerifyUsername: verifyUsername,
+    sellerStats: typeof SELLER_STATS !== 'undefined' ? SELLER_STATS : null,
+    siteConfig: typeof SITE_CONFIG !== 'undefined' ? SITE_CONFIG : null,
+    paymentMethods: typeof PAYMENT_METHODS !== 'undefined' ? PAYMENT_METHODS : null,
+  };
 
 })();
 

@@ -1,6 +1,8 @@
 {
-  "processedAt": "2026-06-24T08:37:39.477Z",
+  "processedAt": "2026-06-26T15:22:52.011Z",
   "displayPath": "assets/images/capes/display",
+  "canvasWidth": 120,
+  "canvasHeight": 180,
   "files": [
     {
       "filename": "builderback.png",
@@ -10,7 +12,11 @@
         "width": 282,
         "height": 451
       },
-      "width": 113,
+      "contentWidth": 282,
+      "contentHeight": 451,
+      "scaledWidth": 113,
+      "scaledHeight": 180,
+      "width": 120,
       "height": 180,
       "webp": "assets/images/capes/display/builderback.webp",
       "png": "assets/images/capes/display/builderback.png"
@@ -23,7 +29,11 @@
         "width": 290,
         "height": 452
       },
-      "width": 115,
+      "contentWidth": 290,
+      "contentHeight": 452,
+      "scaledWidth": 115,
+      "scaledHeight": 180,
+      "width": 120,
       "height": 180,
       "webp": "assets/images/capes/display/builderfront.webp",
       "png": "assets/images/capes/display/builderfront.png"
@@ -36,7 +46,11 @@
         "width": 272,
         "height": 392
       },
-      "width": 125,
+      "contentWidth": 272,
+      "contentHeight": 392,
+      "scaledWidth": 120,
+      "scaledHeight": 173,
+      "width": 120,
       "height": 180,
       "webp": "assets/images/capes/display/copperback.webp",
       "png": "assets/images/capes/display/copperback.png"
@@ -49,7 +63,11 @@
         "width": 272,
         "height": 432
       },
-      "width": 113,
+      "contentWidth": 272,
+      "contentHeight": 432,
+      "scaledWidth": 113,
+      "scaledHeight": 180,
+      "width": 120,
       "height": 180,
       "webp": "assets/images/capes/display/copperfront.webp",
       "png": "assets/images/capes/display/copperfront.png"
@@ -62,7 +80,11 @@
         "width": 238,
         "height": 378
       },
-      "width": 113,
+      "contentWidth": 238,
+      "contentHeight": 378,
+      "scaledWidth": 113,
+      "scaledHeight": 180,
+      "width": 120,
       "height": 180,
       "webp": "assets/images/capes/display/crafterback.webp",
       "png": "assets/images/capes/display/crafterback.png"
@@ -75,7 +97,11 @@
         "width": 85,
         "height": 133
       },
-      "width": 115,
+      "contentWidth": 85,
+      "contentHeight": 133,
+      "scaledWidth": 115,
+      "scaledHeight": 180,
+      "width": 120,
       "height": 180,
       "webp": "assets/images/capes/display/crafterfront.webp",
       "png": "assets/images/capes/display/crafterfront.png"
@@ -88,7 +114,11 @@
         "width": 77,
         "height": 120
       },
-      "width": 116,
+      "contentWidth": 77,
+      "contentHeight": 120,
+      "scaledWidth": 116,
+      "scaledHeight": 180,
+      "width": 120,
       "height": 180,
       "webp": "assets/images/capes/display/expereinceback.webp",
       "png": "assets/images/capes/display/expereinceback.png"
@@ -101,7 +131,11 @@
         "width": 77,
         "height": 119
       },
-      "width": 116,
+      "contentWidth": 77,
+      "contentHeight": 119,
+      "scaledWidth": 116,
+      "scaledHeight": 180,
+      "width": 120,
       "height": 180,
       "webp": "assets/images/capes/display/experiencefront.webp",
       "png": "assets/images/capes/display/experiencefront.png"
@@ -114,7 +148,11 @@
         "width": 65,
         "height": 100
       },
-      "width": 117,
+      "contentWidth": 65,
+      "contentHeight": 100,
+      "scaledWidth": 117,
+      "scaledHeight": 180,
+      "width": 120,
       "height": 180,
       "webp": "assets/images/capes/display/homeback.webp",
       "png": "assets/images/capes/display/homeback.png"
@@ -127,7 +165,11 @@
         "width": 79,
         "height": 119
       },
-      "width": 119,
+      "contentWidth": 79,
+      "contentHeight": 119,
+      "scaledWidth": 119,
+      "scaledHeight": 180,
+      "width": 120,
       "height": 180,
       "webp": "assets/images/capes/display/homefront.webp",
       "png": "assets/images/capes/display/homefront.png"
@@ -140,7 +182,11 @@
         "width": 78,
         "height": 118
       },
-      "width": 119,
+      "contentWidth": 78,
+      "contentHeight": 118,
+      "scaledWidth": 119,
+      "scaledHeight": 180,
+      "width": 120,
       "height": 180,
       "webp": "assets/images/capes/display/menacefront.webp",
       "png": "assets/images/capes/display/menacefront.png"
@@ -153,7 +199,11 @@
         "width": 56,
         "height": 87
       },
-      "width": 116,
+      "contentWidth": 56,
+      "contentHeight": 87,
+      "scaledWidth": 116,
+      "scaledHeight": 180,
+      "width": 120,
       "height": 180,
       "webp": "assets/images/capes/display/mencaeback.webp",
       "png": "assets/images/capes/display/mencaeback.png"
@@ -166,7 +216,11 @@
         "width": 67,
         "height": 104
       },
-      "width": 116,
+      "contentWidth": 67,
+      "contentHeight": 104,
+      "scaledWidth": 116,
+      "scaledHeight": 180,
+      "width": 120,
       "height": 180,
       "webp": "assets/images/capes/display/moonlightback.webp",
       "png": "assets/images/capes/display/moonlightback.png"
@@ -179,7 +233,11 @@
         "width": 60,
         "height": 94
       },
-      "width": 115,
+      "contentWidth": 60,
+      "contentHeight": 94,
+      "scaledWidth": 115,
+      "scaledHeight": 180,
+      "width": 120,
       "height": 180,
       "webp": "assets/images/capes/display/moonlightfront.webp",
       "png": "assets/images/capes/display/moonlightfront.png"
@@ -192,7 +250,11 @@
         "width": 82,
         "height": 130
       },
-      "width": 114,
+      "contentWidth": 82,
+      "contentHeight": 130,
+      "scaledWidth": 114,
+      "scaledHeight": 180,
+      "width": 120,
       "height": 180,
       "webp": "assets/images/capes/display/purpleheartback.webp",
       "png": "assets/images/capes/display/purpleheartback.png"
@@ -205,7 +267,11 @@
         "width": 76,
         "height": 117
       },
-      "width": 117,
+      "contentWidth": 76,
+      "contentHeight": 117,
+      "scaledWidth": 117,
+      "scaledHeight": 180,
+      "width": 120,
       "height": 180,
       "webp": "assets/images/capes/display/purpltheartfront.webp",
       "png": "assets/images/capes/display/purpltheartfront.png"

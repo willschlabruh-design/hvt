@@ -4,7 +4,14 @@
   "scripts": {
     "process-capes": "node scripts/process-cape-images.js",
     "cape-manifest": "node scripts/generate-cape-manifest.js",
-    "capes": "node scripts/process-cape-images.js && node scripts/generate-cape-manifest.js"
+    "capes": "node scripts/process-cape-images.js && node scripts/generate-cape-manifest.js",
+    "start": "node server/contact-server.js",
+    "dev": "node server/contact-server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemailer": "^6.9.16"
   },
   "devDependencies": {
     "sharp": "^0.33.5"

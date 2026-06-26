@@ -42,6 +42,8 @@ function resolveCapeAsset(cape, assets) {
 
 function mergeCapeWithAsset(cape, asset) {
   const imagePath = asset?.frontImage || guessImagePath(cape);
+  const displayWidth = asset?.frontDisplayWidth || 120;
+  const displayHeight = asset?.frontDisplayHeight || 180;
 
   return {
     ...cape,
@@ -49,6 +51,10 @@ function mergeCapeWithAsset(cape, asset) {
     imagePath,
     frontImage: asset?.frontImage || imagePath,
     backImage: asset?.backImage || null,
+    displayWidth,
+    displayHeight,
+    backDisplayWidth: asset?.backDisplayWidth || displayWidth,
+    backDisplayHeight: asset?.backDisplayHeight || displayHeight,
     hasDualView: Boolean(asset?.hasDualView && asset?.frontImage && asset?.backImage),
     priceDisplay: cape.price || '$0.00',
     price: parseFloat(String(cape.price || '0').replace(/[^0-9.]/g, '')) || 0,
@@ -147,6 +153,8 @@ function bindCapeViewToggle(card, cape) {
       img.style.width = '';
       img.style.height = '';
       img.src = view === 'front' ? cape.frontImage : cape.backImage;
+      img.width = view === 'front' ? (cape.displayWidth || 120) : (cape.backDisplayWidth || cape.displayWidth || 120);
+      img.height = view === 'front' ? (cape.displayHeight || 180) : (cape.backDisplayHeight || cape.displayHeight || 180);
       img.alt = `${cape.name} — ${view} view`;
       img.classList.remove('is-switching');
     }, 120);
@@ -175,7 +183,7 @@ function showImageUnavailable(visual, toggle) {
   if (toggle) toggle.remove();
 }
 
-/** Downscale only when preview area is narrower/shorter than native display asset. */
+/** Downscale only when the stage is smaller than native display pixels (integer-friendly). */
 function fitCapePreviewImage(img) {
   const stage = img.closest('.cape-preview-stage');
   if (!stage || !img.naturalWidth || !img.naturalHeight) return;
@@ -184,15 +192,15 @@ function fitCapePreviewImage(img) {
   const maxH = stage.clientHeight;
   if (!maxW || !maxH) return;
 
-  const ratio = Math.min(maxW / img.naturalWidth, maxH / img.naturalHeight, 1);
-  if (ratio >= 1) {
+  const scale = Math.min(maxW / img.naturalWidth, maxH / img.naturalHeight, 1);
+  if (scale >= 1) {
     img.style.width = '';
     img.style.height = '';
     return;
   }
 
-  const w = Math.floor(img.naturalWidth * ratio);
-  const h = Math.floor(img.naturalHeight * ratio);
+  const w = Math.round(img.naturalWidth * scale);
+  const h = Math.round(img.naturalHeight * scale);
   img.style.width = `${w}px`;
   img.style.height = `${h}px`;
 }
@@ -234,7 +242,7 @@ function createGalleryCard(cape, options = {}) {
   const dualView = cape.hasDualView;
   const toggleHtml = dualView ? buildViewToggle().outerHTML : '';
 
-  const imgHtml = `<img src="${cape.frontImage || cape.imagePath}" alt="${cape.name}" class="gallery-cape-img" decoding="async">`;
+  const imgHtml = `<img src="${cape.frontImage || cape.imagePath}" alt="${cape.name}" class="gallery-cape-img" width="${cape.displayWidth || 120}" height="${cape.displayHeight || 180}" decoding="async">`;
 
   const card = document.createElement('article');
   card.className = premium ? 'gallery-card gallery-card-premium reveal' : 'gallery-card reveal';

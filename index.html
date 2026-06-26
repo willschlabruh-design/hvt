@@ -47,7 +47,7 @@
     "sameAs": [
       "https://discord.gg/vTCPxq9zAT"
     ],
-    "paymentAccepted": ["PayPal", "Cryptocurrency"]
+    "paymentAccepted": ["PayPal Friends and Family", "Cryptocurrency"]
   }
   </script>
 </head>
@@ -85,6 +85,7 @@
         <a href="capes.html" class="text-sm text-slate-400 hover:text-white transition-colors">Marketplace</a>
         <a href="#how-it-works" class="text-sm text-slate-400 hover:text-white transition-colors">How It Works</a>
         <a href="#discord" class="text-sm text-slate-400 hover:text-white transition-colors">Discord</a>
+        <a href="how-cape-codes-work.html" class="text-sm text-slate-400 hover:text-white transition-colors">How Codes Work</a>
         <a href="faq.html" class="text-sm text-slate-400 hover:text-white transition-colors">FAQ</a>
       </div>
 
@@ -135,19 +136,19 @@
 
               <div class="hero-cinematic__cape hero-cinematic__cape--left">
                 <div class="hero-cinematic__cape-aura hero-cinematic__cape-aura--amber" aria-hidden="true"></div>
-                <img src="assets/images/capes/display/crafterfront.webp" alt="" class="hero-cape-img" width="115" height="180" decoding="async">
+                <img src="assets/images/capes/display/crafterfront.webp" alt="" class="hero-cape-img" width="120" height="180" decoding="async">
                 <span class="hero-cinematic__cape-name">Crafter</span>
               </div>
 
               <div class="hero-cinematic__cape hero-cinematic__cape--featured">
                 <div class="hero-cinematic__cape-aura hero-cinematic__cape-aura--moon" aria-hidden="true"></div>
-                <img src="assets/images/capes/display/moonlightfront.webp" alt="Moonlight Cape" class="hero-cape-img" width="115" height="180" decoding="async">
+                <img src="assets/images/capes/display/moonlightfront.webp" alt="Moonlight Cape" class="hero-cape-img" width="120" height="180" decoding="async">
                 <span class="hero-cinematic__cape-tag">Moonlight Cape</span>
               </div>
 
               <div class="hero-cinematic__cape hero-cinematic__cape--right">
                 <div class="hero-cinematic__cape-aura hero-cinematic__cape-aura--emerald" aria-hidden="true"></div>
-                <img src="assets/images/capes/display/experiencefront.webp" alt="" class="hero-cape-img" width="115" height="180" decoding="async">
+                <img src="assets/images/capes/display/experiencefront.webp" alt="" class="hero-cape-img" width="120" height="180" decoding="async">
                 <span class="hero-cinematic__cape-name">Experience</span>
               </div>
             </div>
@@ -217,7 +218,7 @@
         <span class="trust-badge__value" data-seller-stat="vouches-value">300+</span>
         <span class="trust-badge__label" data-seller-stat="vouches-label">Vouches</span>
       </div>
-      <div class="trust-badge"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg> PayPal</div>
+      <div class="trust-badge"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg> PayPal (F&amp;F)</div>
       <div class="trust-badge"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Cryptocurrency</div>
     </div>
 
@@ -250,8 +251,9 @@
             <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center mb-4">
               <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
-            <h3 class="font-semibold mb-2">PayPal</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">PayPal is accepted for purchases initiated through Discord.</p>
+            <h3 class="font-semibold mb-2">PayPal (Friends &amp; Family)</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-3">PayPal Friends &amp; Family (F&amp;F) only — not Goods &amp; Services. Using the wrong payment type may delay your order.</p>
+            <span class="payment-method-badge">F&amp;F required at checkout</span>
           </div>
 
           <div class="reveal reveal-delay-1 premium-card p-6 group">
@@ -259,7 +261,8 @@
               <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
             </div>
             <h3 class="font-semibold mb-2">Cryptocurrency</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">Cryptocurrency is accepted for purchases initiated through Discord.</p>
+            <p class="text-sm text-slate-400 leading-relaxed mb-3">Cryptocurrency accepted through Discord. Wallet and coin details are confirmed when your order is approved.</p>
+            <span class="payment-method-badge payment-method-badge--crypto">Method confirmed in Discord</span>
           </div>
 
           <div class="reveal reveal-delay-2 premium-card p-6 group sm:col-span-2 lg:col-span-1">
@@ -323,8 +326,12 @@
         <div class="reveal section-header">
           <span class="section-label">Secure Checkout</span>
           <h2 class="section-header__title">Payment Methods</h2>
-          <p class="section-header__desc">PayPal and cryptocurrency accepted. Purchases are made through Discord.</p>
+          <p class="section-header__desc">PayPal (Friends &amp; Family) and cryptocurrency. Your payment method is confirmed in Discord before you pay.</p>
         </div>
+
+        <aside class="reveal payment-ff-notice max-w-3xl mx-auto mb-10" role="note">
+          <strong>PayPal checkout:</strong> We accept PayPal Friends &amp; Family (F&amp;F) only. Goods &amp; Services payments are not accepted and may delay your order while we verify or return the payment.
+        </aside>
 
         <div class="grid md:grid-cols-2 gap-8 mb-16">
           <div class="reveal payment-card">
@@ -332,10 +339,12 @@
               <div class="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center mx-auto mb-6">
                 <svg class="w-8 h-8 text-blue-400" viewBox="0 0 24 24" fill="currentColor"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944 2.901a.77.77 0 0 1 .762-.659h6.988c2.613 0 4.626.634 5.984 1.884 1.087 1.002 1.624 2.383 1.624 4.127 0 .943-.173 1.898-.515 2.838a8.62 8.62 0 0 1-1.443 2.361c-1.228 1.396-2.925 2.104-5.043 2.104H9.676l-1.02 5.38a.641.641 0 0 1-.633.541h-.947z"/></svg>
               </div>
-              <h3 class="text-2xl font-display font-bold mb-3">PayPal</h3>
-              <p class="text-slate-400 mb-6 leading-relaxed">Pay with PayPal. Purchases are initiated through Discord.</p>
-              <ul class="text-sm text-slate-400 space-y-2 text-left max-w-xs mx-auto">
-                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> PayPal accepted</li>
+              <h3 class="text-2xl font-display font-bold mb-3">PayPal (F&amp;F)</h3>
+              <p class="text-slate-400 mb-4 leading-relaxed">Send payment as <strong class="text-slate-200">Friends &amp; Family</strong> only after your order and total are confirmed in Discord.</p>
+              <span class="payment-method-badge">Active method: PayPal F&amp;F</span>
+              <ul class="text-sm text-slate-400 space-y-2 text-left max-w-xs mx-auto mt-6">
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Friends &amp; Family only</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Wrong type may delay order</li>
               </ul>
             </div>
           </div>
@@ -346,9 +355,11 @@
                 <svg class="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
               </div>
               <h3 class="text-2xl font-display font-bold mb-3">Cryptocurrency</h3>
-              <p class="text-slate-400 mb-6 leading-relaxed">Pay with cryptocurrency. Purchases are initiated through Discord.</p>
-              <ul class="text-sm text-slate-400 space-y-2 text-left max-w-xs mx-auto">
-                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Cryptocurrency accepted</li>
+              <p class="text-slate-400 mb-4 leading-relaxed">Pay with crypto after your order is confirmed. We will tell you which coin and wallet address to use in Discord.</p>
+              <span class="payment-method-badge payment-method-badge--crypto">Active method: Crypto</span>
+              <ul class="text-sm text-slate-400 space-y-2 text-left max-w-xs mx-auto mt-6">
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Wallet provided in Discord</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Send exact quoted amount</li>
               </ul>
             </div>
           </div>
@@ -369,7 +380,7 @@
               <div class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center mb-3">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
               </div>
-              <span class="text-sm font-medium">Pay Securely</span>
+              <span class="text-sm font-medium">Pay (F&amp;F or Crypto)</span>
             </div>
             <div class="hidden md:block w-16 h-px bg-gradient-to-r from-purple-500 to-blue-500"></div>
             <div class="payment-flow-step flex flex-col items-center text-center px-6 opacity-50">
@@ -414,7 +425,7 @@
             <div class="reveal reveal-delay-1 md:grid md:grid-cols-[1fr_auto_1fr] md:gap-8 items-center md:pt-12">
               <div class="premium-card p-6 md:mr-0 order-2 md:order-1">
                 <h3 class="font-display font-semibold text-xl mb-2">Pay Securely</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Join Discord and complete your purchase via PayPal or cryptocurrency.</p>
+                <p class="text-slate-400 text-sm leading-relaxed">Join Discord, confirm your cape and price, then pay via PayPal Friends &amp; Family or cryptocurrency — your seller will state which method applies.</p>
               </div>
               <div class="timeline-dot mx-auto order-1 md:order-2">2</div>
               <div class="hidden md:block order-3"></div>
@@ -449,13 +460,14 @@
       </div>
     </section>
 
-    <!-- USER INPUT REQUIRED: Add FAQ items with verified answers in faq.html -->
+    <!-- FAQ -->
     <section id="faq-preview" class="relative py-24 md:py-32 bg-aurora">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
         <span class="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-medium tracking-wider uppercase glass text-purple-300 border border-purple-500/20">FAQ</span>
         <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4">Questions?</h2>
-        <p class="text-lg text-slate-400 mb-8">FAQ content is pending. Contact us on Discord for answers, or provide FAQ content to populate the FAQ page.</p>
-        <a href="faq.html" class="btn btn-secondary">FAQ Page</a>
+        <p class="text-lg text-slate-400 mb-8">Payment methods, redemption, delivery, and refunds — answered on our FAQ page.</p>
+        <a href="faq.html" class="btn btn-secondary">View FAQ</a>
+        <a href="how-cape-codes-work.html" class="btn btn-primary ml-0 sm:ml-3 mt-3 sm:mt-0 inline-flex">How Codes Work</a>
       </div>
     </section>
 
@@ -467,12 +479,18 @@
           <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight mb-3">Get In Touch</h2>
           <p class="text-slate-400">Questions about a cape or need help with an order? Reach us through any channel below.</p>
         </div>
-        <div class="contact-grid reveal max-w-2xl mx-auto">
+        <div class="contact-grid reveal max-w-4xl mx-auto">
           <div class="contact-card">
             <div class="contact-icon"><svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg></div>
             <h3>Discord</h3>
-            <p>Purchase capes and get support.</p>
+            <p>Purchase capes and get live support.</p>
             <a href="https://discord.gg/vTCPxq9zAT" target="_blank" rel="noopener noreferrer" data-link="discord">Join Server →</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <h3>Support Form</h3>
+            <p>Order help, payment questions, or general inquiries.</p>
+            <a href="support.html">Contact Support →</a>
           </div>
           <div class="contact-card contact-card--verify">
             <div class="contact-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
@@ -512,59 +530,12 @@
   </main>
 
   <!-- ═══ FOOTER ═══ -->
-  <footer class="border-t border-white/5 py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-        <div>
-          <a href="index.html" class="flex items-center gap-2.5 mb-4">
-            <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center font-bold text-sm">H</div>
-            <span class="font-display font-bold text-lg">HVT<span class="text-purple-400">DEVIL</span></span>
-          </a>
-          <p class="text-sm text-slate-400 leading-relaxed">Minecraft cape code marketplace. PayPal and cryptocurrency accepted.</p>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-slate-300">Navigation</h4>
-          <ul class="space-y-2 text-sm text-slate-400">
-            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
-            <li><a href="capes.html" class="hover:text-white transition-colors">Marketplace</a></li>
-            <li><a href="faq.html" class="hover:text-white transition-colors">FAQ</a></li>
-            <li><a href="#how-it-works" class="hover:text-white transition-colors">How It Works</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-slate-300">Community</h4>
-          <ul class="space-y-2 text-sm text-slate-400">
-            <li><a href="https://discord.gg/vTCPxq9zAT" target="_blank" rel="noopener noreferrer" data-link="discord" class="hover:text-white transition-colors">Discord Server</a></li>
-            <li><a href="trust.html" class="hover:text-white transition-colors">Trust &amp; Safety</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-slate-300">Legal</h4>
-          <ul class="space-y-2 text-sm text-slate-400">
-            <li><a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
-            <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
-            <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="authenticity-footer-bar max-w-3xl mx-auto px-4 sm:px-0">
-        <aside class="authenticity-notice authenticity-notice--compact" role="note" aria-label="Identity verification">
-          <div class="authenticity-notice__icon" aria-hidden="true">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-          </div>
-          <p class="authenticity-notice__text">Always verify that you are speaking with the real me by checking my Discord account: <span class="authenticity-notice__username" data-discord-username>getmeintogaming</span></p>
-        </aside>
-      </div>
-      <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
-        <p>&copy; <span id="current-year">2026</span> HVTDEVIL. All rights reserved.</p>
-        <p>Not affiliated with Mojang Studios or Microsoft.</p>
-      </div>
-    </div>
-  </footer>
+  <footer data-site-footer data-footer-variant="home"></footer>
 
   <script src="js/animations.js"></script>
   <script src="js/home.js"></script>
   <script src="js/inventory.js"></script>
+  <script src="js/footer.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

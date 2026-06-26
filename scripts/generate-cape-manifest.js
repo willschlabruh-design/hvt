@@ -45,10 +45,31 @@ function resolveDisplayAsset(stem) {
   const pngAbs = path.join(ROOT, pngRel);
 
   if (fs.existsSync(webpAbs)) {
-    return { path: webpRel, format: 'webp', filename: `${stem}.webp` };
+    return { path: webpRel, format: 'webp', filename: `${stem}.webp`, abs: webpAbs };
   }
   if (fs.existsSync(pngAbs)) {
-    return { path: pngRel, format: 'png', filename: `${stem}.png` };
+    return { path: pngRel, format: 'png', filename: `${stem}.png`, abs: pngAbs };
+  }
+  return null;
+}
+
+function loadDisplayManifest() {
+  const manifestPath = path.join(DISPLAY_DIR, 'manifest.json');
+  if (!fs.existsSync(manifestPath)) return null;
+  try {
+    return JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+  } catch {
+    return null;
+  }
+}
+
+function lookupDisplayDimensions(stem, displayManifest) {
+  const entry = displayManifest?.files?.find((f) => f.filename === `${stem}.png`);
+  if (entry?.width && entry?.height) {
+    return { width: entry.width, height: entry.height };
+  }
+  if (displayManifest?.canvasWidth && displayManifest?.canvasHeight) {
+    return { width: displayManifest.canvasWidth, height: displayManifest.canvasHeight };
   }
   return null;
 }
@@ -56,6 +77,11 @@ function resolveDisplayAsset(stem) {
 const imageFiles = fs.readdirSync(CAPES_DIR).filter((f) => f.toLowerCase().endsWith('.png')).sort();
 const parsed = imageFiles.map(parseAssetName).filter(Boolean);
 const unknown = parsed.filter((p) => !p.id);
+
+const displayManifest = loadDisplayManifest();
+const defaultDisplayDims = displayManifest
+  ? { width: displayManifest.canvasWidth || 120, height: displayManifest.canvasHeight || 180 }
+  : { width: 120, height: 180 };
 
 const byId = new Map();
 parsed.forEach((p) => {
@@ -69,6 +95,10 @@ parsed.forEach((p) => {
       backFilename: null,
       frontSource: null,
       backSource: null,
+      frontDisplayWidth: null,
+      frontDisplayHeight: null,
+      backDisplayWidth: null,
+      backDisplayHeight: null,
       hasDualView: false,
     });
   }
@@ -76,15 +106,20 @@ parsed.forEach((p) => {
   const display = resolveDisplayAsset(p.stem);
   const sourceRel = `assets/images/capes/${p.filename}`;
   const rel = display?.path || sourceRel;
+  const dims = lookupDisplayDimensions(p.stem, displayManifest) || defaultDisplayDims;
 
   if (p.view === 'front') {
     row.frontImage = rel;
     row.frontFilename = display?.filename || p.filename;
     row.frontSource = sourceRel;
+    row.frontDisplayWidth = dims.width;
+    row.frontDisplayHeight = dims.height;
   } else {
     row.backImage = rel;
     row.backFilename = display?.filename || p.filename;
     row.backSource = sourceRel;
+    row.backDisplayWidth = dims.width;
+    row.backDisplayHeight = dims.height;
   }
   row.hasDualView = Boolean(row.frontImage && row.backImage);
 });

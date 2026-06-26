@@ -3,6 +3,8 @@
  * Uses content bounding-box detection (sharp.trim fails when black appears inside capes).
  * Outputs lossless WEBP (primary) + PNG fallback under assets/images/capes/display/
  *
+ * All display assets share one canvas size so the browser never applies uneven scaling.
+ *
  * Run: npm run process-capes
  */
 const fs = require('fs');
@@ -16,7 +18,9 @@ const DISPLAY_DIR = path.join(SOURCE_DIR, 'display');
 const ALPHA_MIN = 8;
 const LUMINANCE_MIN = 24;
 const PAD = 2;
-const MAX_DISPLAY_HEIGHT = 180;
+/** Uniform display canvas — every cape renders at identical pixel dimensions */
+const CANVAS_WIDTH = 120;
+const CANVAS_HEIGHT = 180;
 
 function isContentPixel(r, g, b, a) {
   return a > ALPHA_MIN && (r + g + b) > LUMINANCE_MIN;
@@ -37,11 +41,8 @@ async function findContentBounds(inputPath) {
   for (let y = 0; y < height; y++) {
     for (let x = 0; x < width; x++) {
       const i = (y * width + x) * channels;
-      const r = data[i];
-      const g = data[i + 1];
-      const b = data[i + 2];
       const a = data[i + 3];
-      if (!isContentPixel(r, g, b, a)) continue;
+      if (!isContentPixel(data[i], data[i + 1], data[i + 2], a)) continue;
       if (x < minX) minX = x;
       if (y < minY) minY = y;
       if (x > maxX) maxX = x;
@@ -71,27 +72,53 @@ async function processFile(filename) {
   const pngOut = path.join(DISPLAY_DIR, `${stem}.png`);
 
   const bounds = await findContentBounds(sourcePath);
-  let pipeline = sharp(sourcePath).ensureAlpha();
+  let trimmed = sharp(sourcePath).ensureAlpha();
 
   if (bounds) {
-    pipeline = pipeline.extract(bounds);
+    trimmed = trimmed.extract(bounds);
   }
 
-  pipeline = pipeline.resize({
-    height: MAX_DISPLAY_HEIGHT,
-    kernel: sharp.kernel.nearest,
-  });
+  const contentWidth = bounds?.width ?? (await sharp(sourcePath).metadata()).width ?? CANVAS_WIDTH;
+  const contentHeight = bounds?.height ?? (await sharp(sourcePath).metadata()).height ?? CANVAS_HEIGHT;
+
+  // Fit content into canvas with nearest-neighbor (pixel art safe).
+  // Same scale rule for every cape — no height-only resize that varies output width.
+  const scale = Math.min(
+    CANVAS_HEIGHT / contentHeight,
+    CANVAS_WIDTH / contentWidth
+  );
+  const scaledW = Math.max(1, Math.round(contentWidth * scale));
+  const scaledH = Math.max(1, Math.round(contentHeight * scale));
+
+  const scaledBuf = await trimmed
+    .resize(scaledW, scaledH, { kernel: sharp.kernel.nearest })
+    .png()
+    .toBuffer();
+
+  const left = Math.floor((CANVAS_WIDTH - scaledW) / 2);
+  const top = Math.floor((CANVAS_HEIGHT - scaledH) / 2);
+
+  const pipeline = sharp({
+    create: {
+      width: CANVAS_WIDTH,
+      height: CANVAS_HEIGHT,
+      channels: 4,
+      background: { r: 0, g: 0, b: 0, alpha: 0 },
+    },
+  }).composite([{ input: scaledBuf, left, top }]);
 
   await pipeline.clone().webp({ lossless: true, effort: 4 }).toFile(webpOut);
   await pipeline.clone().png({ compressionLevel: 6 }).toFile(pngOut);
 
-  const meta = await sharp(webpOut).metadata();
-
   return {
     filename,
     bounds,
-    width: meta.width,
-    height: meta.height,
+    contentWidth,
+    contentHeight,
+    scaledWidth: scaledW,
+    scaledHeight: scaledH,
+    width: CANVAS_WIDTH,
+    height: CANVAS_HEIGHT,
     webp: path.relative(ROOT, webpOut).replace(/\\/g, '/'),
     png: path.relative(ROOT, pngOut).replace(/\\/g, '/'),
   };
@@ -119,12 +146,16 @@ async function main() {
   for (const file of sources) {
     const info = await processFile(file);
     results.push(info);
-    console.log(`Trimmed ${file} → ${info.width}x${info.height}`);
+    console.log(
+      `Processed ${file} → ${info.width}x${info.height} (content ${info.contentWidth}x${info.contentHeight}, scaled ${info.scaledWidth}x${info.scaledHeight})`
+    );
   }
 
   const manifest = {
     processedAt: new Date().toISOString(),
     displayPath: 'assets/images/capes/display',
+    canvasWidth: CANVAS_WIDTH,
+    canvasHeight: CANVAS_HEIGHT,
     files: results,
   };
 

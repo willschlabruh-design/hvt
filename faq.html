@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FAQ — HVTDEVIL</title>
-  <meta name="description" content="Frequently asked questions about HVTDEVIL Minecraft cape codes.">
+  <meta name="description" content="Frequently asked questions about HVTDEVIL Minecraft cape codes, payments, delivery, and redemption.">
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -20,11 +20,12 @@
       <div class="hidden md:flex items-center gap-8">
         <a href="capes.html" class="text-sm text-slate-400 hover:text-white transition-colors">Marketplace</a>
         <a href="faq.html" class="text-sm text-white font-medium">FAQ</a>
+        <a href="support.html" class="text-sm text-slate-400 hover:text-white transition-colors">Support</a>
       </div>
-      <a href="https://discord.gg/vTCPxq9zAT" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex btn btn-primary btn-sm">Join Discord</a>
+      <a href="https://discord.gg/vTCPxq9zAT" target="_blank" rel="noopener noreferrer" data-link="discord" class="hidden md:inline-flex btn btn-primary btn-sm">Join Discord</a>
       <button id="mobile-menu-toggle" class="md:hidden p-2 text-slate-400" aria-label="Open menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
     </nav>
-    <div id="mobile-menu" class="mobile-menu md:hidden glass-strong border-t border-white/5"><div class="px-4 py-6 flex flex-col gap-4"><a href="capes.html" class="text-slate-400 py-2">Marketplace</a><a href="https://discord.gg/vTCPxq9zAT" target="_blank" class="btn btn-primary">Join Discord</a></div></div>
+    <div id="mobile-menu" class="mobile-menu md:hidden glass-strong border-t border-white/5"><div class="px-4 py-6 flex flex-col gap-4"><a href="capes.html" class="text-slate-400 py-2">Marketplace</a><a href="support.html" class="text-slate-400 py-2">Support</a><a href="https://discord.gg/vTCPxq9zAT" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">Join Discord</a></div></div>
   </header>
 
   <main class="pt-24 md:pt-28 pb-24">
@@ -34,44 +35,96 @@
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <span class="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-medium tracking-wider uppercase glass text-purple-300 border border-purple-500/20">Support</span>
         <h1 class="text-4xl md:text-5xl font-display font-bold tracking-tight mb-4">Frequently Asked <span class="gradient-text">Questions</span></h1>
-        <p class="text-lg text-slate-400">FAQ content will appear here once provided.</p>
+        <p class="text-lg text-slate-400">Answers about purchasing, payment, delivery, and redemption.</p>
       </div>
     </section>
 
     <section class="py-8">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- USER INPUT REQUIRED:
-             Provide real FAQ questions and answers (delivery times, payment methods,
-             crypto details, refund policy, redemption steps, etc.).
-             No FAQ items have been supplied yet.
-        -->
-        <div class="glass-strong rounded-2xl p-8 md:p-10 text-center reveal">
-          <p class="text-slate-400 leading-relaxed mb-6">No FAQ items are published yet. For questions about purchasing, payment, delivery, or refunds, contact us on Discord.</p>
-          <a href="https://discord.gg/vTCPxq9zAT" target="_blank" rel="noopener noreferrer" data-link="discord" class="btn btn-primary">Contact Us on Discord</a>
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+
+        <div class="accordion-item glass-strong rounded-2xl overflow-hidden reveal">
+          <button class="accordion-trigger w-full flex items-center justify-between p-6 text-left font-semibold" aria-expanded="false">
+            How do I purchase a cape?
+            <svg class="accordion-icon w-5 h-5 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-content hidden px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+            Browse the <a href="capes.html" class="text-purple-400 hover:text-purple-300">marketplace</a>, join our official <a href="https://discord.gg/vTCPxq9zAT" data-link="discord" class="text-purple-400 hover:text-purple-300">Discord</a>, and open a ticket or message to purchase. Verify the seller username is <span data-discord-username>getmeintogaming</span> before paying.
+          </div>
+        </div>
+
+        <div class="accordion-item glass-strong rounded-2xl overflow-hidden reveal">
+          <button class="accordion-trigger w-full flex items-center justify-between p-6 text-left font-semibold" aria-expanded="false">
+            Which payment methods do you accept?
+            <svg class="accordion-icon w-5 h-5 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-content hidden px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+            We accept PayPal Friends &amp; Family (F&amp;F) and cryptocurrency. Your seller will confirm which method applies to your order in Discord before you send payment. PayPal Goods &amp; Services is not accepted.
+          </div>
+        </div>
+
+        <div class="accordion-item glass-strong rounded-2xl overflow-hidden reveal">
+          <button class="accordion-trigger w-full flex items-center justify-between p-6 text-left font-semibold" aria-expanded="false">
+            Why must PayPal be Friends &amp; Family?
+            <svg class="accordion-icon w-5 h-5 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-content hidden px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+            We only accept PayPal F&amp;F for Discord sales. If you send Goods &amp; Services or use the wrong payment type, we may need to refund and ask you to resend correctly — this delays delivery.
+          </div>
+        </div>
+
+        <div class="accordion-item glass-strong rounded-2xl overflow-hidden reveal">
+          <button class="accordion-trigger w-full flex items-center justify-between p-6 text-left font-semibold" aria-expanded="false">
+            How fast is delivery?
+            <svg class="accordion-icon w-5 h-5 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-content hidden px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+            Codes are delivered in Discord after payment is confirmed. Timing depends on availability and payment settlement — most orders are handled quickly during active hours.
+          </div>
+        </div>
+
+        <div class="accordion-item glass-strong rounded-2xl overflow-hidden reveal">
+          <button class="accordion-trigger w-full flex items-center justify-between p-6 text-left font-semibold" aria-expanded="false">
+            How do I redeem my cape code?
+            <svg class="accordion-icon w-5 h-5 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-content hidden px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+            Sign in at <a href="https://www.minecraft.net/en-us/redeem" class="text-purple-400 hover:text-purple-300" target="_blank" rel="noopener noreferrer">minecraft.net/redeem</a> with your Microsoft account, enter the code, and confirm. See our full guide: <a href="how-cape-codes-work.html" class="text-purple-400 hover:text-purple-300">How Cape Codes Work</a>.
+          </div>
+        </div>
+
+        <div class="accordion-item glass-strong rounded-2xl overflow-hidden reveal">
+          <button class="accordion-trigger w-full flex items-center justify-between p-6 text-left font-semibold" aria-expanded="false">
+            Can I transfer a cape after redemption?
+            <svg class="accordion-icon w-5 h-5 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-content hidden px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+            No. Once redeemed, the cape is permanently bound to the Microsoft account you used. Redemption cannot be undone or moved to another account.
+          </div>
+        </div>
+
+        <div class="accordion-item glass-strong rounded-2xl overflow-hidden reveal">
+          <button class="accordion-trigger w-full flex items-center justify-between p-6 text-left font-semibold" aria-expanded="false">
+            What is your refund policy?
+            <svg class="accordion-icon w-5 h-5 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-content hidden px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+            Digital codes are final once delivered. Refunds may be considered only if we fail to deliver a valid code or provide a replacement. Full details: <a href="refund-policy.html" class="text-purple-400 hover:text-purple-300">Refund Policy</a>.
+          </div>
+        </div>
+
+        <div class="text-center pt-8 reveal">
+          <p class="text-slate-400 mb-6">Still need help?</p>
+          <a href="support.html" class="btn btn-primary">Contact Support</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-white/5 py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="authenticity-footer-bar max-w-3xl mx-auto mb-8">
-        <aside class="authenticity-notice authenticity-notice--compact" role="note" aria-label="Identity verification">
-          <div class="authenticity-notice__icon" aria-hidden="true">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-          </div>
-          <p class="authenticity-notice__text">Always verify that you are speaking with the real me by checking my Discord account: <span class="authenticity-notice__username" data-discord-username>getmeintogaming</span></p>
-        </aside>
-      </div>
-      <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
-        <p>&copy; <span id="current-year">2026</span> HVTDEVIL. All rights reserved.</p>
-        <div class="flex gap-6"><a href="terms.html" class="hover:text-white transition-colors">Terms</a><a href="privacy.html" class="hover:text-white transition-colors">Privacy</a><a href="trust.html" class="hover:text-white transition-colors">Trust &amp; Safety</a><a href="index.html" class="hover:text-white transition-colors">Home</a></div>
-      </div>
-    </div>
-  </footer>
+  <footer data-site-footer></footer>
 
   <script src="js/prices-config.js"></script>
   <script src="js/animations.js"></script>
+  <script src="js/footer.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
