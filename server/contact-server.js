@@ -38,8 +38,10 @@ app.get('*', (req, res, next) => {
 });
 
 app.listen(PORT, () => {
+  const provider = process.env.EMAIL_PROVIDER || (process.env.RESEND_API_KEY ? 'resend' : process.env.SMTP_HOST ? 'smtp' : '(none)');
   console.log('HVTDEVIL server running at http://localhost:' + PORT);
   console.log('Contact API: POST http://localhost:' + PORT + '/api/contact');
+  console.log('Email provider:', provider);
   if (!process.env.SUPPORT_EMAIL) {
     console.warn('Warning: SUPPORT_EMAIL is not set — contact form will fail until configured.');
   }

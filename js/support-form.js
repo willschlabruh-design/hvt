@@ -152,7 +152,9 @@
       const data = await response.json().catch(() => ({}));
 
       if (!response.ok) {
-        throw new Error(data.error || 'Unable to send your message. Please try Discord or email instead.');
+        const parts = [data.error || 'Unable to send your message.'];
+        if (data.code) parts.push('(' + data.code + ')');
+        throw new Error(parts.join(' '));
       }
 
       try {

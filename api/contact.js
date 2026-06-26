@@ -1,9 +1,7 @@
 /**
- * Vercel / serverless contact API
- * POST /api/contact
+ * Vercel / Node serverless contact API — POST /api/contact
  *
- * Required env vars: SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, SUPPORT_EMAIL
- * Optional: SMTP_FROM
+ * Supports EMAIL_PROVIDER=smtp (default when SMTP_* set) or resend.
  */
 const { handleContactRequest } = require('../lib/contact-handler');
 
@@ -17,10 +15,17 @@ module.exports = async function handler(req, res) {
   }
 
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed.' });
+    return res.status(405).json({ error: 'Method not allowed.', code: 'METHOD_NOT_ALLOWED' });
   }
 
-  const body = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : req.body || {};
-  const result = await handleContactRequest(body);
+  let body = {};
+  try {
+    body = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : req.body || {};
+  } catch (err) {
+    console.error('[contact] invalid JSON', err?.message);
+    return res.status(400).json({ error: 'Invalid JSON body.', code: 'INVALID_JSON' });
+  }
+
+  const result = await handleContactRequest(body, process.env);
   return res.status(result.status).json(result.body);
 };
