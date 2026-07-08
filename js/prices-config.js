@@ -66,7 +66,7 @@ const CAPES = [
   {
     id: 'crafter',
     name: 'Crafter Cape',
-    price: '$350',
+    price: '$600',
     description:
       'TwitchCon Rotterdam 2026 in-person exclusive—earned by collecting three Emerald stickers at the event. Online drops were not offered; new codes only came from attendance.',
     glow: '#d97706',
